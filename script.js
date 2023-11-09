@@ -20,7 +20,10 @@ container.addEventListener('mouseover', () =>{
   const boxes = document.querySelectorAll('.smallBox');
   boxes.forEach((box) => {
     box.addEventListener('mouseover', () =>{
-      box.style.backgroundColor = 'black'
+      let red = Math.floor(Math.random() * 255);
+      let green = Math.floor(Math.random() * 255);
+      let blue = Math.floor(Math.random() * 255);
+      box.style.backgroundColor = `rgb(${red},${green},${blue})`;
     });
   });
 });
