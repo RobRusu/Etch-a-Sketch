@@ -39,14 +39,14 @@ btn.addEventListener('click', () =>{
     boxes.forEach((box) => {
       container.removeChild(box);
     });
-    for (let i = 0; i <= value; i++){
+    for (let i = 0; i < value; i++){
       const box = document.createElement('div');
       box.classList.add('box');
       container.appendChild(box);
     };
     const box = document.querySelectorAll('.box');
     box.forEach((smallBox) => {
-      for (let i = 0; i <= value; i++){
+      for (let i = 0; i < value; i++){
       const smallerBox = document.createElement('div');
       smallerBox.classList.add('smallBox');
       smallBox.appendChild(smallerBox);
