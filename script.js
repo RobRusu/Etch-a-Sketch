@@ -1,4 +1,7 @@
 const container = document.querySelector('.container');
+const redSlider = document.querySelector('#red');
+const greenSlider = document.querySelector('#green');
+const blueSlider = document.querySelector('#blue');
 let size = 16;
 
 for (let i = 0; i <= size; i++){
@@ -20,9 +23,9 @@ container.addEventListener('mouseover', () =>{
   const boxes = document.querySelectorAll('.smallBox');
   boxes.forEach((box) => {
     box.addEventListener('mouseover', () =>{
-      let red = Math.floor(Math.random() * 255);
-      let green = Math.floor(Math.random() * 255);
-      let blue = Math.floor(Math.random() * 255);
+      let red = redSlider.value;
+      let green = greenSlider.value;
+      let blue = blueSlider.value;
       box.style.backgroundColor = `rgb(${red},${green},${blue})`;
     });
   });
@@ -56,3 +59,25 @@ range.oninput = function () {
     });
   }
 };
+
+
+const redInput = document.querySelector('#red');
+const redOutput = document.querySelector('.redSliderValue');
+redOutput.textContent = redInput.value;
+redInput.oninput = function () {
+  redOutput.textContent = this.value;
+}
+
+const greenInput = document.querySelector('#green');
+const greenOutput = document.querySelector('.greenSliderValue');
+greenOutput.textContent = greenInput.value;
+greenInput.oninput = function () {
+  greenOutput.textContent = this.value;
+}
+
+const blueInput = document.querySelector('#blue');
+const blueOutput = document.querySelector('.blueSliderValue');
+blueOutput.textContent = blueInput.value;
+blueInput.oninput = function () {
+  blueOutput.textContent = this.value;
+}
