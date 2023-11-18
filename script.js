@@ -81,3 +81,11 @@ blueOutput.textContent = blueInput.value;
 blueInput.oninput = function () {
   blueOutput.textContent = this.value;
 }
+
+const reset = document.querySelector('.reset');
+reset.addEventListener('click', () =>{
+  const boxes = document.querySelectorAll('.smallBox');
+  boxes.forEach((box) =>{
+    box.style.backgroundColor = 'white';
+  })
+})
