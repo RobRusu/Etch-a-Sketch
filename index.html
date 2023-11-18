@@ -9,9 +9,22 @@
 </head>
 <body>
   <h1>Etch-a-Sketch</h1>
-  <div class="menu">
-    <button class="add">New grid</button>
+  <div class="main">
+    <div class="menu">
+      <div class="newGrid">
+        <label for="size">Select size of grid</label>
+        <div class="slider">
+          <p>1</p>
+          <input type="range" name="size" min="1" max="100" class="range" value="16">
+          <p>100</p>
+        </div>
+        <p class="output"></p>
+      </div>
+      <button>Change color</button>
+      <button>Reset</button>
+      <button>Change mode</button>
+    </div>
+    <div class="container"></div>
   </div>
-  <div class="container"></div>
 </body>
 </html>

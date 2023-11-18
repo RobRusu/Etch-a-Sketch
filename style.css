@@ -3,6 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: black;
   gap: 20px;
 }
 
@@ -11,7 +12,7 @@ body {
   flex-direction: column;
   height: 700px;
   width: 700px;
-  border: 5px solid black;
+  border: 5px solid red;
 }
 
 .box {
@@ -23,4 +24,35 @@ body {
   display: flex;
   flex: 1;
   border: 1px solid black;
+}
+
+.main {
+  display: flex;
+  border: 10px solid red;
+  background-color: white;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  border-right: 5px solid red;
+}
+h1 {
+  color: white;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.output {
+  margin: 0;
+}
+
+.newGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

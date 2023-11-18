@@ -28,29 +28,31 @@ container.addEventListener('mouseover', () =>{
   });
 });
 
-const btn = document.querySelector('.add');
-btn.addEventListener('click', () =>{
-  let value = prompt("What is the size of your new grid?");
-  size = value * value;
-  if (value > 100){
-    alert('Number needs to be 100 or lower');
+const range = document.querySelector('.range');
+const output = document.querySelector('.output');
+output.textContent = range.value;
+range.oninput = function () {
+  output.textContent = this.value;
+    size = this.value * this.value;
+  if (this.value > 100){
+    output.textContent = 'Number needs to be 100 or lower';
   }else {
     const boxes = document.querySelectorAll('.box');
     boxes.forEach((box) => {
       container.removeChild(box);
     });
-    for (let i = 0; i < value; i++){
+    for (let i = 0; i < this.value; i++){
       const box = document.createElement('div');
       box.classList.add('box');
       container.appendChild(box);
     };
     const box = document.querySelectorAll('.box');
     box.forEach((smallBox) => {
-      for (let i = 0; i < value; i++){
+      for (let i = 0; i < this.value; i++){
       const smallerBox = document.createElement('div');
       smallerBox.classList.add('smallBox');
       smallBox.appendChild(smallerBox);
       }
     });
   }
-});
+};
