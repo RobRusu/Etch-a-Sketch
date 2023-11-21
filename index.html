@@ -13,61 +13,68 @@
     <div class="title">
       <h1>Etch-a-Sketch</h1>
     </div>
-      <div class="main">
-    <div class="menu">
-      <div class="newGrid">
-        <label for="size">Select size of grid</label>
-        <div class="slider">
-          <p>1</p>
-          <input type="range" name="size" min="1" max="100" class="range" value="16">
-          <p>100</p>
-        </div>
-        <p class="output"></p>
-      </div>
-      <div class="color">
-        <details>
-        <summary class="summary"><p class="change">Change color</p></summary>
-        <div class="red">
-          <p>Red</p>
-          <div class="redSlider">
-            <p>0</p>
-            <input type="range" id="red" value="0" min="0" max="255">
-            <p>255</p>
+    <div class="main">
+      <div class="menu">
+        <div class="newGrid">
+          <label for="size">Select size of grid</label>
+          <div class="slider">
+            <p>1</p>
+            <input type="range" name="size" min="1" max="100" class="range" value="16">
+            <p>100</p>
           </div>
-          <p class="redSliderValue"></p>
+          <p class="output"></p>
         </div>
-        <div class="green">
-          <p>Green</p>
-          <div class="greenSlider">
-            <p>0</p>
-            <input type="range" id="green" value="0" min="0" max="255">
-            <p>255</p>
+        <div class="color">
+          <details>
+          <summary class="summary"><p class="change">Change color</p></summary>
+          <div class="red">
+            <p>Red</p>
+            <div class="redSlider">
+              <p>0</p>
+              <input type="range" id="red" value="0" min="0" max="255">
+              <p>255</p>
+            </div>
+            <p class="redSliderValue"></p>
           </div>
-          <p class="greenSliderValue"></p>
-        </div>
-        <div class="blue">
-          <p>Blue</p>
-          <div class="blueSlider">
-            <p>0</p>
-            <input type="range" id="blue" value="0" min="0" max="255">
-            <p>255</p>
+          <div class="green">
+            <p>Green</p>
+            <div class="greenSlider">
+              <p>0</p>
+              <input type="range" id="green" value="0" min="0" max="255">
+              <p>255</p>
+            </div>
+            <p class="greenSliderValue"></p>
           </div>
-          <p class="blueSliderValue"></p>
+          <div class="blue">
+            <p>Blue</p>
+            <div class="blueSlider">
+              <p>0</p>
+              <input type="range" id="blue" value="0" min="0" max="255">
+              <p>255</p>
+            </div>
+            <p class="blueSliderValue"></p>
+          </div>
+          </details>
         </div>
-        </details>
+        <div class="changeMode">
+          <label for="mode" class="label">Change mode</label>
+          <select name="mode" id="mode" class="option">
+            <option value="mouseover" class="option">Mouseover</option>
+            <option value="click" class="option">Click</option>
+            <option value="clickAndMouseover" class="option">Click & Drag</option>
+          </select>
+        </div>
+        <button style="font-size:16px" class="reset">Clear <i class="fa fa-trash-o"></i></button>
       </div>
-      <div class="changeMode">
-        <label for="mode" class="label">Change mode</label>
-        <select name="mode" id="mode" class="option">
-          <option value="mouseover" class="option">Mouseover</option>
-          <option value="click" class="option">Click</option>
-          <option value="clickAndMouseover" class="option">Click & Drag</option>
-        </select>
-      </div>
-      <button style="font-size:16px" class="reset">Clear <i class="fa fa-trash-o"></i></button>
+      <div class="container"></div>
+
     </div>
-    <div class="container"></div>
-      </div>
+    <div class="footer">
+      <p>Copyright</p>
+      <p>© 2023</p>
+      <p>Made by RobRusu</p>
+      <a href="https://github.com/RobRusu?tab=repositories" target="_blank"><i class="fa fa-github footer" style="font-size:48px;color:black"></i></a>
+    </div>
   </div>
 </body>
 </html>
