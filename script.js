@@ -19,17 +19,17 @@ box.forEach((smallBox) => {
   }
 });
 
-container.addEventListener('mouseover', () =>{
-  const boxes = document.querySelectorAll('.smallBox');
-  boxes.forEach((box) => {
-    box.addEventListener('mouseover', () =>{
-      let red = redSlider.value;
-      let green = greenSlider.value;
-      let blue = blueSlider.value;
-      box.style.backgroundColor = `rgb(${red},${green},${blue})`;
-    });
-  });
-});
+// container.addEventListener('mouseover', () =>{
+//   const boxes = document.querySelectorAll('.smallBox');
+//   boxes.forEach((box) => {
+//     box.addEventListener('mouseover', () =>{
+//       let red = redSlider.value;
+//       let green = greenSlider.value;
+//       let blue = blueSlider.value;
+//       box.style.backgroundColor = `rgb(${red},${green},${blue})`;
+//     });
+//   });
+// });
 
 const range = document.querySelector('.range');
 const output = document.querySelector('.output');
@@ -89,3 +89,47 @@ reset.addEventListener('click', () =>{
     box.style.backgroundColor = 'white';
   })
 })
+
+const mode = document.querySelector('#mode');
+container.addEventListener('mouseenter', () =>{
+  if (mode.value === 'mouseover'){
+      const boxes = document.querySelectorAll('.smallBox');
+      boxes.forEach((box) => {
+        box.addEventListener('mouseover', color)})
+  } else if (mode.value === 'click'){
+    const boxes = document.querySelectorAll('.smallBox');
+    boxes.forEach((box) => {
+      box.removeEventListener('mouseover', color)
+    });
+    boxes.forEach((box) => {
+      box.addEventListener('click', color)
+    });
+  } else if (mode.value === 'clickAndMouseover'){
+    const boxes = document.querySelectorAll('.smallBox');
+    boxes.forEach((box) => {
+      box.removeEventListener('mouseover', color);
+      box.removeEventListener('click', color);
+    });
+    boxes.forEach((box) => {
+      box.addEventListener('mousedown', () => {
+        boxes.forEach((box) => {
+          box.addEventListener('mouseover', color);
+        });
+      });
+    });
+    boxes.forEach((box => {
+      box.addEventListener('mouseup', () => {
+        boxes.forEach((box) =>{
+          box.removeEventListener('mouseover',color);
+        });
+      });
+    }));
+  }
+});
+
+function color() {
+  let red = redSlider.value;
+  let green = greenSlider.value;
+  let blue = blueSlider.value;
+  this.style.backgroundColor = `rgb(${red},${green},${blue})`;
+};

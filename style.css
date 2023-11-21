@@ -7,8 +7,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: black;
+  background-color: rgb(63, 57, 57);
   gap: 20px;
+  height: 80vh;
 }
 
 .container {
@@ -16,7 +17,7 @@ body {
   flex-direction: column;
   height: 700px;
   width: 700px;
-  border: 5px solid red;
+  border: 5px solid rgb(29, 26, 26);
 }
 
 .box {
@@ -27,23 +28,30 @@ body {
 .smallBox {
   display: flex;
   flex: 1;
-  border: 1px solid black;
+  border: 1px solid rgb(73, 73, 73);
 }
 
 .main {
   display: flex;
-  border: 10px solid red;
+  border: 10px solid rgb(29, 26, 26);
   background-color: white;
+  border-radius: 15px;
+  color: #d3d3d3;
+  font-weight: bold;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
-  border-right: 5px solid red;
-  gap: 20px
+  border-right: 5px solid rgb(29, 26, 26);
+  gap: 70px;
+  background-color: rgb(29, 26, 26);
+  justify-content: center;
 }
+
 h1 {
   color: white;
+  font-size: 60px;
 }
 
 .slider {
@@ -52,7 +60,7 @@ h1 {
   height: 20px;
 }
 .range{
-  background: blue;
+  background: rgb(73, 73, 73);
 }
 
 .output {
@@ -70,6 +78,7 @@ h1 {
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  align-self: center;
 }
 
 input[type="range"] { 
@@ -83,7 +92,7 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; 
   height: 18px; 
   width: 18px; 
-  background: #000000; 
+  background: #d3d3d3; 
   border-radius: 50%; 
   cursor: pointer; 
 } 
@@ -110,3 +119,69 @@ input[type="range"]::-webkit-slider-thumb {
   text-align: center;
 }
 
+.changeMode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.changeMode .label{
+  background-color: rgb(73, 73, 73);
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.changeMode .option {
+  background-color: rgb(73, 73, 73);
+  color: #d3d3d3;
+  border-radius: 5px;
+}
+
+#mode{
+  width: 90%;
+  text-align: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.color .change {
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(73, 73, 73);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.summary {
+  list-style: none;
+  cursor: pointer;
+  width: 161px;
+}
+
+.reset {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+.reset:hover {
+  background-color: #c92727;
+}
+
+.reset:active{
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  transform: translateY(0.5px);
+}
