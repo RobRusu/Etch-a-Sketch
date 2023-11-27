@@ -9,7 +9,6 @@ body {
   flex-direction: column;
   background-color: rgb(63, 57, 57);
   gap: 20px;
-  height: 80vh;
 }
 
 .container {
